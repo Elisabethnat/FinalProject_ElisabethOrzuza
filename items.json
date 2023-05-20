@@ -1,0 +1,52 @@
+
+[
+    {
+        "id":1,
+        "imagen":"./img/blazer_pink.png",
+        "nombre":"Blazer Pink",
+        "precio":50000
+    },
+    {
+        "id":2,
+        "imagen":"./img/jean_de_mujer.png",
+        "nombre":"Jean Otoñal",
+        "precio":30000
+    },
+    {
+        "id":3,
+        "imagen":"./img/mono_de_jean.jpg",
+        "nombre":"Mono Style",
+        "precio":35800
+    },
+    {
+        "id":4,
+        "imagen":"./img/pantalon_de_vestir.png",
+        "nombre":"Pantalón Classic",
+        "precio":28000
+    },
+    
+    {
+        "id":6,
+        "imagen":"./img/camisa_de_hombre.jpg",
+        "nombre":"Camisa Exclusive",
+        "precio":19000
+    },
+    {
+        "id":7,
+        "imagen":"./img/campera_columbia_hombre2.jpg",
+        "nombre":"Campera Dark",
+        "precio":60000
+    },
+    {
+        "id":8,
+        "imagen":"./img/jean_de_hombre.png",
+        "nombre":"Modern Jean",
+        "precio":25000
+    },
+    {
+        "id":9,
+        "imagen":"./img/outfit_jogging_hombre.jpg",
+        "nombre":"Jogging Outfit",
+        "precio":31000
+    
+    }]
