@@ -23,10 +23,9 @@ function filtrarPorPrecio() {
   const max = Number(inputMax.value);
   
   // Filtrar los productos por el rango de precios
-  // Puedes adaptar esta lógica a tu estructura de datos y mostrar los productos filtrados como desees
   const productosFiltrados = productos.filter(producto => producto.precio >= min && producto.precio <= max);
   
-  // Ejemplo de cómo podrías mostrar los productos filtrados en la consola
+  // Ej
   renderizarProductosFiltrados(productosFiltrados);
 }
 
@@ -34,7 +33,7 @@ function filtrarPorPrecio() {
 function renderizarProductosFiltrados(productosFiltrados) {
   const contenedorProductosFiltrados = document.getElementById('container-productos');
   
-  // Vaciar el contenedor antes de agregar los productos filtrados
+  // Vaciar antes de agregar los productos filtrados
   contenedorProductosFiltrados.innerHTML = '';
   
   productosFiltrados.forEach(producto => {
@@ -51,7 +50,7 @@ function renderizarProductosFiltrados(productosFiltrados) {
     `;
     contenedorProductosFiltrados.appendChild(div);
     
-    // Agregar funcionalidad al botón "Agregar al carrito" en los productos filtrados
+    // Agregar funcionalidad "Agregar al carrito" en los prod. filtrados
     const agregar = document.getElementById(`button${producto.id}`);
     agregar.addEventListener('click', () => {
       pushearCarrito(`${producto.id}`);
@@ -66,12 +65,7 @@ function aJson(){
   }
 }
 
-
-// reforzar fetch, metodos de array, spread operator, y condicionales con ternarias.
-
-
-// traemos los productos con una promesa asyncrona.
-// sinonimo de consumir una API pero local.
+// Se trae los productos con una promesa asyncrona.
 async function fetchData(){
     const res = await fetch("./items.json")
     const data = await res.json();
@@ -81,7 +75,7 @@ async function fetchData(){
 }
 
 
-// creamos la funcion que renderiza nuestros productos traidos desde el json guardados en productos.
+// creamos la funcion que renderiza nuestros productos traidos desde el json.
 function createProduct(){
     const contenedorProductos = document.getElementById('container-productos');
         productos.forEach((producto) => {
@@ -98,7 +92,6 @@ function createProduct(){
         `
         contenedorProductos.appendChild(div)
 
-        // agregamos funcionalidad al boton
         const agregar = document.getElementById(`button${producto.id}`);
         agregar.addEventListener('click',() => {
           Toastify({
@@ -106,9 +99,9 @@ function createProduct(){
             duration: 3000,
             destination: "https://github.com/apvarun/toastify-js",
             newWindow: true,
-            gravity: "top", // `top` or `bottom`
-            position: "left ", // `left`, `center` or `right`
-            stopOnFocus: true, // Prevents dismissing of toast on hover
+            gravity: "top", 
+            position: "left ", 
+            stopOnFocus: true, 
             style: {
               background: "linear-gradient(to right, #00b09b, #96c93d)",
             },
@@ -121,11 +114,7 @@ function createProduct(){
 }
 
 
-
-
-
-
-// agregar producto al carrito
+// Se agrega el producto al carrito
 function pushearCarrito(id) {
     const producto = productos.find((prod) => prod.id == id);
     if (!producto) {
